@@ -8,7 +8,8 @@
 
 import UIKit
 
-class StartViewController: UIViewController {
+
+class StartViewController: UIViewController{
 
 
     @IBOutlet weak var StartImage: UIImageView!
@@ -19,7 +20,6 @@ class StartViewController: UIViewController {
          let tapGesture = UITapGestureRecognizer(target: self, action: #selector(StartViewController.goToData(gesture:)))
         self.StartImage.addGestureRecognizer(tapGesture)
         StartImage.isUserInteractionEnabled = true
-
 
     
     }
@@ -32,9 +32,10 @@ class StartViewController: UIViewController {
     func goToData(gesture: UITapGestureRecognizer)
     {
         if (gesture.view as? UIImageView) != nil {
-            let storyboard = UIStoryboard(name: "Data", bundle: nil)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "data") as UIViewController
             present(vc, animated: true, completion: nil)
+            
         }
     }
     
