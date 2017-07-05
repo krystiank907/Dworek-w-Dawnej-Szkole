@@ -7,19 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		974640CA1F0BD69C0047FFF1 /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 974640C91F0BD69C0047FFF1 /* Start.storyboard */; };
+		974640CC1F0BD6D20047FFF1 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974640CB1F0BD6D20047FFF1 /* StartViewController.swift */; };
 		97BC5C331EFB0876002DEA53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BC5C321EFB0876002DEA53 /* AppDelegate.swift */; };
-		97BC5C351EFB0876002DEA53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BC5C341EFB0876002DEA53 /* ViewController.swift */; };
-		97BC5C381EFB0876002DEA53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97BC5C361EFB0876002DEA53 /* Main.storyboard */; };
+		97BC5C351EFB0876002DEA53 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BC5C341EFB0876002DEA53 /* DataViewController.swift */; };
+		97BC5C381EFB0876002DEA53 /* Data.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97BC5C361EFB0876002DEA53 /* Data.storyboard */; };
 		97BC5C3B1EFB0876002DEA53 /* Dworek_w_Dawnej_Szkole.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 97BC5C391EFB0876002DEA53 /* Dworek_w_Dawnej_Szkole.xcdatamodeld */; };
 		97BC5C3D1EFB0876002DEA53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97BC5C3C1EFB0876002DEA53 /* Assets.xcassets */; };
 		97BC5C401EFB0876002DEA53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97BC5C3E1EFB0876002DEA53 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		974640C91F0BD69C0047FFF1 /* Start.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
+		974640CB1F0BD6D20047FFF1 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		97BC5C2F1EFB0876002DEA53 /* Dworek w Dawnej Szkole.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dworek w Dawnej Szkole.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97BC5C321EFB0876002DEA53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		97BC5C341EFB0876002DEA53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		97BC5C371EFB0876002DEA53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		97BC5C341EFB0876002DEA53 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		97BC5C371EFB0876002DEA53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Data.storyboard; sourceTree = "<group>"; };
 		97BC5C3A1EFB0876002DEA53 /* Dworek_w_Dawnej_Szkole.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Dworek_w_Dawnej_Szkole.xcdatamodel; sourceTree = "<group>"; };
 		97BC5C3C1EFB0876002DEA53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97BC5C3F1EFB0876002DEA53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +41,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		974640C71F0BD6240047FFF1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				97BC5C341EFB0876002DEA53 /* DataViewController.swift */,
+				97BC5C361EFB0876002DEA53 /* Data.storyboard */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		974640C81F0BD67F0047FFF1 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				974640C91F0BD69C0047FFF1 /* Start.storyboard */,
+				974640CB1F0BD6D20047FFF1 /* StartViewController.swift */,
+			);
+			name = Start;
+			sourceTree = "<group>";
+		};
 		97BC5C261EFB0876002DEA53 = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +78,9 @@
 		97BC5C311EFB0876002DEA53 /* Dworek w Dawnej Szkole */ = {
 			isa = PBXGroup;
 			children = (
+				974640C81F0BD67F0047FFF1 /* Start */,
+				974640C71F0BD6240047FFF1 /* Data */,
 				97BC5C321EFB0876002DEA53 /* AppDelegate.swift */,
-				97BC5C341EFB0876002DEA53 /* ViewController.swift */,
-				97BC5C361EFB0876002DEA53 /* Main.storyboard */,
 				97BC5C3C1EFB0876002DEA53 /* Assets.xcassets */,
 				97BC5C3E1EFB0876002DEA53 /* LaunchScreen.storyboard */,
 				97BC5C411EFB0876002DEA53 /* Info.plist */,
@@ -128,8 +150,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				97BC5C401EFB0876002DEA53 /* LaunchScreen.storyboard in Resources */,
+				974640CA1F0BD69C0047FFF1 /* Start.storyboard in Resources */,
 				97BC5C3D1EFB0876002DEA53 /* Assets.xcassets in Resources */,
-				97BC5C381EFB0876002DEA53 /* Main.storyboard in Resources */,
+				97BC5C381EFB0876002DEA53 /* Data.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +164,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				97BC5C3B1EFB0876002DEA53 /* Dworek_w_Dawnej_Szkole.xcdatamodeld in Sources */,
-				97BC5C351EFB0876002DEA53 /* ViewController.swift in Sources */,
+				974640CC1F0BD6D20047FFF1 /* StartViewController.swift in Sources */,
+				97BC5C351EFB0876002DEA53 /* DataViewController.swift in Sources */,
 				97BC5C331EFB0876002DEA53 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,12 +173,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		97BC5C361EFB0876002DEA53 /* Main.storyboard */ = {
+		97BC5C361EFB0876002DEA53 /* Data.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				97BC5C371EFB0876002DEA53 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Data.storyboard;
 			sourceTree = "<group>";
 		};
 		97BC5C3E1EFB0876002DEA53 /* LaunchScreen.storyboard */ = {
@@ -306,6 +330,7 @@
 				97BC5C461EFB0876002DEA53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
