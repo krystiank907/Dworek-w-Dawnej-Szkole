@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "dworek_logo.png",
+      "filename" : "Untitled-1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Untitled-1@2x.png",
       "scale" : "2x"
     },
     {

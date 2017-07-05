@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Data View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="data" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="DataViewController" customModule="Dworek_w_Dawnej_Szkole" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="2185" translatesAutoresizingMaskIntoConstraints="NO" id="Sxi-1W-Ib7">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Untitled-1" translatesAutoresizingMaskIntoConstraints="NO" id="iFY-wQ-43d">
+                                <rect key="frame" x="3" y="253" width="409" height="230"/>
+                            </imageView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="V0y-GA-4li">
+                                <rect key="frame" x="3" y="253" width="409" height="230"/>
+                                <date key="date" timeIntervalSinceReferenceDate="519776629.82393801">
+                                    <!--2017-06-21 22:23:49 +0000-->
+                                </date>
+                            </datePicker>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="ljJ-DH-gx4">
+                                <rect key="frame" x="3" y="52" width="409" height="168"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wybierz Datę" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHj-nN-OVs">
+                                <rect key="frame" x="77" y="85" width="260" height="102"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="30"/>
+                                <color key="textColor" red="0.040480379015207291" green="0.049961287528276443" blue="0.094250380992889404" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="prev_button" translatesAutoresizingMaskIntoConstraints="NO" id="PZ8-MT-noc">
+                                <rect key="frame" x="0.0" y="676" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.045007877051830292" green="0.0065619065426290035" blue="0.0072387289255857468" alpha="0.17958402317880795" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="next_button" translatesAutoresizingMaskIntoConstraints="NO" id="Ef6-ZQ-dhu">
+                                <rect key="frame" x="354" y="676" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.044309832155704498" green="0.010644249618053436" blue="0.011234421283006668" alpha="0.18116204470198677" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PZ8-MT-noc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4uy-ma-UBa"/>
+                            <constraint firstItem="KHj-nN-OVs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="65" id="8nL-o1-xjF"/>
+                            <constraint firstItem="Sxi-1W-Ib7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8yh-23-QwR"/>
+                            <constraint firstItem="iFY-wQ-43d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AEc-7T-6af"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Sxi-1W-Ib7" secondAttribute="bottom" id="CBA-VN-TcL"/>
+                            <constraint firstAttribute="trailing" secondItem="Sxi-1W-Ib7" secondAttribute="trailing" id="IhB-aY-5VS"/>
+                            <constraint firstItem="KHj-nN-OVs" firstAttribute="centerY" secondItem="ljJ-DH-gx4" secondAttribute="centerY" id="KKk-oS-82Y"/>
+                            <constraint firstItem="ljJ-DH-gx4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SPR-sI-dRw"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ef6-ZQ-dhu" secondAttribute="bottom" id="USR-mW-7ui"/>
+                            <constraint firstItem="V0y-GA-4li" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YoG-VO-efQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PZ8-MT-noc" secondAttribute="bottom" id="dHI-g1-hgP"/>
+                            <constraint firstItem="KHj-nN-OVs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dbb-7R-KvG"/>
+                            <constraint firstItem="V0y-GA-4li" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="h5o-d0-NLg"/>
+                            <constraint firstItem="iFY-wQ-43d" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="i4Z-LO-sx5"/>
+                            <constraint firstItem="V0y-GA-4li" firstAttribute="height" secondItem="iFY-wQ-43d" secondAttribute="height" id="jo8-et-WUX"/>
+                            <constraint firstAttribute="trailing" secondItem="Ef6-ZQ-dhu" secondAttribute="trailing" id="utw-r8-toe"/>
+                            <constraint firstItem="V0y-GA-4li" firstAttribute="width" secondItem="iFY-wQ-43d" secondAttribute="width" id="zbE-Gn-Aqg"/>
+                            <constraint firstItem="Sxi-1W-Ib7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zog-S2-8pk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="PZ8-MT-noc" id="Nse-u1-vtz"/>
+                        <outlet property="nextButton" destination="Ef6-ZQ-dhu" id="j5a-5l-gnC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1375.3623188405797" y="103.53260869565219"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="2" width="409" height="168"/>
+        <image name="2185" width="1200" height="1200"/>
+        <image name="Untitled-1" width="409" height="230"/>
+        <image name="next_button" width="60" height="60"/>
+        <image name="prev_button" width="60" height="60"/>
+    </resources>
+</document>
