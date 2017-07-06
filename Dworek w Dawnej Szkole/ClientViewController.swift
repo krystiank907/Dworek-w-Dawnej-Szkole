@@ -41,6 +41,7 @@ class ClientViewController: DataBase, UITextFieldDelegate{
         view.addGestureRecognizer(tap)
         
         setup()
+        update()
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
@@ -59,6 +60,7 @@ class ClientViewController: DataBase, UITextFieldDelegate{
     func backToPriv(gesture: UITapGestureRecognizer)
     {
         if (gesture.view as? UIImageView) != nil {
+            save()
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             _ = storyboard.instantiateViewController(withIdentifier: "data") as UIViewController
             dismiss(animated: true, completion: nil)
@@ -134,6 +136,17 @@ class ClientViewController: DataBase, UITextFieldDelegate{
         PHONENUMBER2 = phoneNumb2.text!
         MAIL = mail.text!
         
+    }
+    func update(){
+        name.text = NAME
+        surname.text = SURNAME
+        city.text = CITY
+        postCode.text = POSTCODE
+        street.text = STREET
+        homeNumber.text = HOMENUMBER
+        phoneNumb.text = PHONENUMBER
+        phoneNumb2.text = PHONENUMBER2
+        mail.text = MAIL
     }
     
 
