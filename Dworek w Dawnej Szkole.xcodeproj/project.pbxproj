@@ -17,6 +17,8 @@
 		97BC5C3D1EFB0876002DEA53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97BC5C3C1EFB0876002DEA53 /* Assets.xcassets */; };
 		97BC5C401EFB0876002DEA53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97BC5C3E1EFB0876002DEA53 /* LaunchScreen.storyboard */; };
 		97C8FAF21F0D490000556842 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C8FAF11F0D490000556842 /* InformationViewController.swift */; };
+		97EB226E1F0E804200173467 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EB226D1F0E804200173467 /* MenuViewController.swift */; };
+		97EB22721F0E86F400173467 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EB22711F0E86F400173467 /* MenuTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		97BC5C3F1EFB0876002DEA53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97BC5C411EFB0876002DEA53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97C8FAF11F0D490000556842 /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		97EB226D1F0E804200173467 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		97EB22711F0E86F400173467 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		97BC5C311EFB0876002DEA53 /* Dworek w Dawnej Szkole */ = {
 			isa = PBXGroup;
 			children = (
+				97EB226C1F0E802A00173467 /* Menu */,
 				97C8FAF01F0D48EC00556842 /* information */,
 				974640D21F0D106A0047FFF1 /* Client */,
 				974640CF1F0D079A0047FFF1 /* Support */,
@@ -119,6 +124,15 @@
 				97C8FAF11F0D490000556842 /* InformationViewController.swift */,
 			);
 			name = information;
+			sourceTree = "<group>";
+		};
+		97EB226C1F0E802A00173467 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				97EB226D1F0E804200173467 /* MenuViewController.swift */,
+				97EB22711F0E86F400173467 /* MenuTableViewCell.swift */,
+			);
+			name = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +213,10 @@
 				97C8FAF21F0D490000556842 /* InformationViewController.swift in Sources */,
 				974640CC1F0BD6D20047FFF1 /* StartViewController.swift in Sources */,
 				97BC5C351EFB0876002DEA53 /* DataViewController.swift in Sources */,
+				97EB22721F0E86F400173467 /* MenuTableViewCell.swift in Sources */,
 				97BC5C331EFB0876002DEA53 /* AppDelegate.swift in Sources */,
 				974640D91F0D11F00047FFF1 /* ClientViewController.swift in Sources */,
+				97EB226E1F0E804200173467 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
