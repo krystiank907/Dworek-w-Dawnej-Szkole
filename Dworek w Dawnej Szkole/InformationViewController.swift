@@ -66,7 +66,7 @@ class InformationViewController: DataBase,UITextFieldDelegate {
         
         if (gesture.view as? UIImageView) != nil {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "information") as UIViewController
+            let vc = storyboard.instantiateViewController(withIdentifier: "menu") as UIViewController
             present(vc,animated: true, completion: nil)
         }
         save()
