@@ -52,7 +52,7 @@ class InformationViewController: DataBase,UITextFieldDelegate {
     }
     
 
-    func backToPriv(gesture: UITapGestureRecognizer)
+    @objc func backToPriv(gesture: UITapGestureRecognizer)
     {
         if (gesture.view as? UIImageView) != nil {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -62,7 +62,7 @@ class InformationViewController: DataBase,UITextFieldDelegate {
         save()
     }
     
-    func goToNext(gesture: UITapGestureRecognizer){
+    @objc func goToNext(gesture: UITapGestureRecognizer){
         
         if (gesture.view as? UIImageView) != nil {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -72,7 +72,7 @@ class InformationViewController: DataBase,UITextFieldDelegate {
         save()
         
     }
-    func keyboardWillShow(notification:NSNotification){
+    @objc func keyboardWillShow(notification:NSNotification){
         
         var userInfo = notification.userInfo!
         var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
@@ -83,7 +83,7 @@ class InformationViewController: DataBase,UITextFieldDelegate {
         self.scrollView.contentInset = contentInset
     }
     
-    func keyboardWillHide(notification:NSNotification){
+    @objc func keyboardWillHide(notification:NSNotification){
         
         let contentInset:UIEdgeInsets = UIEdgeInsets.zero
         self.scrollView.contentInset = contentInset
