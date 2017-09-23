@@ -29,7 +29,7 @@ class StartViewController: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
-    func goToData(gesture: UITapGestureRecognizer)
+    @objc func goToData(gesture: UITapGestureRecognizer)
     {
         if (gesture.view as? UIImageView) != nil {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)

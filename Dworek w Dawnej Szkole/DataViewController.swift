@@ -36,7 +36,7 @@ class DataViewController: DataBase {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func backToStart(gesture: UITapGestureRecognizer)
+    @objc func backToStart(gesture: UITapGestureRecognizer)
     {
         if (gesture.view as? UIImageView) != nil {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -44,7 +44,7 @@ class DataViewController: DataBase {
             dismiss(animated: true, completion: nil)
         }
     }
-    func goToNext(gesture: UITapGestureRecognizer){
+    @objc func goToNext(gesture: UITapGestureRecognizer){
         
         if (gesture.view as? UIImageView) != nil {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -53,7 +53,7 @@ class DataViewController: DataBase {
         }
         
     }
-    func dateChanged(_ sender: UIDatePicker) {
+    @objc func dateChanged(_ sender: UIDatePicker) {
         let componenets = Calendar.current.dateComponents([.year, .month, .day], from: sender.date)
         if let day = componenets.day, let month = componenets.month, let year = componenets.year {
             let time1 = "\(day)-\(month)-\(year)"
