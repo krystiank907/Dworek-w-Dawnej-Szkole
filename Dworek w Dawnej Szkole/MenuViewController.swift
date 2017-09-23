@@ -8,14 +8,22 @@
 
 import UIKit
 
-class MenuViewController: UITableViewController {
+class MenuViewController:  UIViewController,UITableViewDataSource,UITableViewDelegate {
     
+    final let urlString = "http://microblogging.wingnity.com/JSONParsingTutorial/jsonActors"
 
+
+    @IBOutlet var tableView: UITableView!
+    
     @IBOutlet weak var backButton: UIImageView!
     @IBOutlet weak var nextButton: UIImageView!
-
+    var nameArray = [String]()
+    var dobArray = [String]()
+    var imgURLArray = [String]()
     
     override func viewDidLoad() {
+        self.downloadJsonWithURL()
+        
         let backgroundImage = UIImage(named: "2185.png")
         let imageView = UIImageView(image: backgroundImage)
         self.tableView.backgroundView = imageView
@@ -38,22 +46,29 @@ class MenuViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return nameArray.count
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "mycell") as! MenuTableViewCell
-        //cell.titleLabel.text = listOfItems[indexPath.item]["title"]
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MenuTableViewCell
+        cell.nameLabel.text = nameArray[indexPath.row]
+        cell.dobLabel.text = dobArray[indexPath.row]
         
+        let imgURL = NSURL(string: imgURLArray[indexPath.row])
+        
+        if imgURL != nil {
+            let data = NSData(contentsOf: (imgURL as? URL)!)
+            cell.imgView.image = UIImage(data: data as! Data)
+        }
         
         return cell
     }
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = .clear
+    }
+    
+    ///for showing next detailed screen with the downloaded info
     
 
     func backToPriv(gesture: UITapGestureRecognizer)
@@ -76,4 +91,54 @@ class MenuViewController: UITableViewController {
 
         
     }
+    func downloadJsonWithURL() {
+        let url = NSURL(string: urlString)
+        URLSession.shared.dataTask(with: (url as? URL)!, completionHandler: {(data, response, error) -> Void in
+            
+            if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
+                print(jsonObj!.value(forKey: "actors"))
+                
+                if let actorArray = jsonObj!.value(forKey: "actors") as? NSArray {
+                    for actor in actorArray{
+                        if let actorDict = actor as? NSDictionary {
+                            if let name = actorDict.value(forKey: "name") {
+                                self.nameArray.append(name as! String)
+                            }
+                            if let name = actorDict.value(forKey: "dob") {
+                                self.dobArray.append(name as! String)
+                            }
+                            if let name = actorDict.value(forKey: "image") {
+                                self.imgURLArray.append(name as! String)
+                            }
+                            
+                        }
+                    }
+                }
+                
+                OperationQueue.main.addOperation({
+                    self.tableView.reloadData()
+                })
+            }
+        }).resume()
+    }
+    
+    
+    func downloadJsonWithTask() {
+        
+        let url = NSURL(string: urlString)
+        
+        var downloadTask = URLRequest(url: (url as? URL)!, cachePolicy: URLRequest.CachePolicy.reloadIgnoringCacheData, timeoutInterval: 20)
+        
+        downloadTask.httpMethod = "GET"
+        
+        URLSession.shared.dataTask(with: downloadTask, completionHandler: {(data, response, error) -> Void in
+            
+            let jsonData = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments)
+            
+            print(jsonData)
+            
+        }).resume()
+    }
+    
+    
 }
