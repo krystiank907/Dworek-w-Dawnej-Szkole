@@ -10,7 +10,7 @@ import UIKit
 
 class MenuViewController:  UIViewController,UITableViewDataSource,UITableViewDelegate {
     
-    final let urlString = "http://microblogging.wingnity.com/JSONParsingTutorial/jsonActors"
+    final let urlString = "https://api.myjson.com/bins/zexyp"
 
 
     @IBOutlet var tableView: UITableView!
@@ -18,8 +18,8 @@ class MenuViewController:  UIViewController,UITableViewDataSource,UITableViewDel
     @IBOutlet weak var backButton: UIImageView!
     @IBOutlet weak var nextButton: UIImageView!
     var nameArray = [String]()
-    var dobArray = [String]()
-    var imgURLArray = [String]()
+
+
     
     override func viewDidLoad() {
         self.downloadJsonWithURL()
@@ -53,14 +53,8 @@ class MenuViewController:  UIViewController,UITableViewDataSource,UITableViewDel
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MenuTableViewCell
         cell.nameLabel.text = nameArray[indexPath.row]
-        cell.dobLabel.text = dobArray[indexPath.row]
+
         
-        let imgURL = NSURL(string: imgURLArray[indexPath.row])
-        
-        if imgURL != nil {
-            let data = NSData(contentsOf: (imgURL as? URL)!)
-            cell.imgView.image = UIImage(data: data as! Data)
-        }
         
         return cell
     }
@@ -71,7 +65,7 @@ class MenuViewController:  UIViewController,UITableViewDataSource,UITableViewDel
     ///for showing next detailed screen with the downloaded info
     
 
-    func backToPriv(gesture: UITapGestureRecognizer)
+   @objc func backToPriv(gesture: UITapGestureRecognizer)
     {
         if (gesture.view as? UIImageView) != nil {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -81,7 +75,7 @@ class MenuViewController:  UIViewController,UITableViewDataSource,UITableViewDel
 
     }
     
-    func goToNext(gesture: UITapGestureRecognizer){
+    @objc func goToNext(gesture: UITapGestureRecognizer){
         
         if (gesture.view as? UIImageView) != nil {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -93,22 +87,18 @@ class MenuViewController:  UIViewController,UITableViewDataSource,UITableViewDel
     }
     func downloadJsonWithURL() {
         let url = NSURL(string: urlString)
-        URLSession.shared.dataTask(with: (url as? URL)!, completionHandler: {(data, response, error) -> Void in
+        URLSession.shared.dataTask(with: ((url as URL?))!, completionHandler: {(data, response, error) -> Void in
             
             if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
-                print(jsonObj!.value(forKey: "actors"))
+                print(jsonObj?.value(forKey: "Menu") as Any)
                 
-                if let actorArray = jsonObj!.value(forKey: "actors") as? NSArray {
+                if let actorArray = jsonObj!.value(forKey: "Menu") as? NSArray {
                     for actor in actorArray{
                         if let actorDict = actor as? NSDictionary {
+                            if let _ = jsonObj!.value(forKey: "Obiad") as? NSArray {
+                            }
                             if let name = actorDict.value(forKey: "name") {
                                 self.nameArray.append(name as! String)
-                            }
-                            if let name = actorDict.value(forKey: "dob") {
-                                self.dobArray.append(name as! String)
-                            }
-                            if let name = actorDict.value(forKey: "image") {
-                                self.imgURLArray.append(name as! String)
                             }
                             
                         }
@@ -127,7 +117,7 @@ class MenuViewController:  UIViewController,UITableViewDataSource,UITableViewDel
         
         let url = NSURL(string: urlString)
         
-        var downloadTask = URLRequest(url: (url as? URL)!, cachePolicy: URLRequest.CachePolicy.reloadIgnoringCacheData, timeoutInterval: 20)
+        var downloadTask = URLRequest(url: ((url as URL?))!, cachePolicy: URLRequest.CachePolicy.reloadIgnoringCacheData, timeoutInterval: 20)
         
         downloadTask.httpMethod = "GET"
         
@@ -135,7 +125,7 @@ class MenuViewController:  UIViewController,UITableViewDataSource,UITableViewDel
             
             let jsonData = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments)
             
-            print(jsonData)
+            print(jsonData!)
             
         }).resume()
     }
