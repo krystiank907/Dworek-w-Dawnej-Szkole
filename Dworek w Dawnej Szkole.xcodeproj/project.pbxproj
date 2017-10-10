@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		971606661F86BC13002BBD7F /* jsonFile.json in Resources */ = {isa = PBXBuildFile; fileRef = 971606651F86BC13002BBD7F /* jsonFile.json */; };
+		9716066A1F86BCAC002BBD7F /* JsonParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971606691F86BCAC002BBD7F /* JsonParse.swift */; };
+		971606701F8ACA2B002BBD7F /* DetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9716066F1F8ACA2B002BBD7F /* DetailViewCell.swift */; };
+		971606721F8AD0DC002BBD7F /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971606711F8AD0DC002BBD7F /* DetailTableViewController.swift */; };
 		974640CC1F0BD6D20047FFF1 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974640CB1F0BD6D20047FFF1 /* StartViewController.swift */; };
 		974640D11F0D07AF0047FFF1 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974640D01F0D07AF0047FFF1 /* DataBase.swift */; };
 		974640D91F0D11F00047FFF1 /* ClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974640D71F0D11F00047FFF1 /* ClientViewController.swift */; };
+		97AFF46A1F8BEEE300941D0D /* SecondMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AFF4691F8BEEE300941D0D /* SecondMenuTableViewController.swift */; };
+		97AFF46C1F8BEEF500941D0D /* SecondMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AFF46B1F8BEEF500941D0D /* SecondMenuTableViewCell.swift */; };
 		97BC5C331EFB0876002DEA53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BC5C321EFB0876002DEA53 /* AppDelegate.swift */; };
 		97BC5C351EFB0876002DEA53 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BC5C341EFB0876002DEA53 /* DataViewController.swift */; };
 		97BC5C381EFB0876002DEA53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97BC5C361EFB0876002DEA53 /* Main.storyboard */; };
@@ -22,11 +28,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		971606651F86BC13002BBD7F /* jsonFile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = jsonFile.json; sourceTree = "<group>"; };
+		971606691F86BCAC002BBD7F /* JsonParse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParse.swift; sourceTree = "<group>"; };
+		9716066F1F8ACA2B002BBD7F /* DetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCell.swift; sourceTree = "<group>"; };
+		971606711F8AD0DC002BBD7F /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		974640CB1F0BD6D20047FFF1 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		974640CD1F0D023B0047FFF1 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Main.strings; sourceTree = "<group>"; };
 		974640CE1F0D023B0047FFF1 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		974640D01F0D07AF0047FFF1 /* DataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		974640D71F0D11F00047FFF1 /* ClientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientViewController.swift; sourceTree = "<group>"; };
+		97AFF4691F8BEEE300941D0D /* SecondMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondMenuTableViewController.swift; sourceTree = "<group>"; };
+		97AFF46B1F8BEEF500941D0D /* SecondMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondMenuTableViewCell.swift; sourceTree = "<group>"; };
 		97BC5C2F1EFB0876002DEA53 /* Dworek w Dawnej Szkole.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dworek w Dawnej Szkole.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97BC5C321EFB0876002DEA53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97BC5C341EFB0876002DEA53 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +84,8 @@
 			children = (
 				974640D01F0D07AF0047FFF1 /* DataBase.swift */,
 				97BC5C361EFB0876002DEA53 /* Main.storyboard */,
+				971606651F86BC13002BBD7F /* jsonFile.json */,
+				971606691F86BCAC002BBD7F /* JsonParse.swift */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -103,12 +117,12 @@
 		97BC5C311EFB0876002DEA53 /* Dworek w Dawnej Szkole */ = {
 			isa = PBXGroup;
 			children = (
-				97EB226C1F0E802A00173467 /* Menu */,
+				974640C71F0BD6240047FFF1 /* Data */,
 				97C8FAF01F0D48EC00556842 /* information */,
 				974640D21F0D106A0047FFF1 /* Client */,
+				97EB226C1F0E802A00173467 /* Menu */,
 				974640C81F0BD67F0047FFF1 /* Start */,
 				974640CF1F0D079A0047FFF1 /* Support */,
-				974640C71F0BD6240047FFF1 /* Data */,
 				97BC5C321EFB0876002DEA53 /* AppDelegate.swift */,
 				97BC5C3C1EFB0876002DEA53 /* Assets.xcassets */,
 				97BC5C3E1EFB0876002DEA53 /* LaunchScreen.storyboard */,
@@ -131,6 +145,10 @@
 			children = (
 				97EB226D1F0E804200173467 /* MenuViewController.swift */,
 				97EB22711F0E86F400173467 /* MenuTableViewCell.swift */,
+				9716066F1F8ACA2B002BBD7F /* DetailViewCell.swift */,
+				971606711F8AD0DC002BBD7F /* DetailTableViewController.swift */,
+				97AFF4691F8BEEE300941D0D /* SecondMenuTableViewController.swift */,
+				97AFF46B1F8BEEF500941D0D /* SecondMenuTableViewCell.swift */,
 			);
 			name = Menu;
 			sourceTree = "<group>";
@@ -199,6 +217,7 @@
 				97BC5C401EFB0876002DEA53 /* LaunchScreen.storyboard in Resources */,
 				97BC5C3D1EFB0876002DEA53 /* Assets.xcassets in Resources */,
 				97BC5C381EFB0876002DEA53 /* Main.storyboard in Resources */,
+				971606661F86BC13002BBD7F /* jsonFile.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,9 +232,14 @@
 				97BC5C3B1EFB0876002DEA53 /* Dworek_w_Dawnej_Szkole.xcdatamodeld in Sources */,
 				97C8FAF21F0D490000556842 /* InformationViewController.swift in Sources */,
 				974640CC1F0BD6D20047FFF1 /* StartViewController.swift in Sources */,
+				97AFF46A1F8BEEE300941D0D /* SecondMenuTableViewController.swift in Sources */,
 				97BC5C351EFB0876002DEA53 /* DataViewController.swift in Sources */,
+				97AFF46C1F8BEEF500941D0D /* SecondMenuTableViewCell.swift in Sources */,
 				97EB22721F0E86F400173467 /* MenuTableViewCell.swift in Sources */,
 				97BC5C331EFB0876002DEA53 /* AppDelegate.swift in Sources */,
+				9716066A1F86BCAC002BBD7F /* JsonParse.swift in Sources */,
+				971606721F8AD0DC002BBD7F /* DetailTableViewController.swift in Sources */,
+				971606701F8ACA2B002BBD7F /* DetailViewCell.swift in Sources */,
 				974640D91F0D11F00047FFF1 /* ClientViewController.swift in Sources */,
 				97EB226E1F0E804200173467 /* MenuViewController.swift in Sources */,
 			);
