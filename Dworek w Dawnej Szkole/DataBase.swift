@@ -29,7 +29,6 @@ var AMOINTPERSON: String = ""
 var MUSIC: String = ""
 var OTHERINFORMATION: String = ""
 
-
 class DataBase: UIViewController{
 
     
